@@ -1,0 +1,35 @@
+#!/bin/bash
+
+USAGE="Usage: ./chat [ start | stop | restart | status ]"
+
+if [ $# -eq 0 ]
+then
+    echo $USAGE
+    exit
+fi
+
+if [ "$1" == "start" ]
+then
+    echo Starting chat...
+    docker-compose up --detach
+    docker-compose ps
+
+elif [ "$1" == "stop" ]
+then
+    echo Stopping chat...
+    docker-compose down
+    docker-compose ps
+
+elif [ "$1" == "restart" ]
+then
+    echo Restarting chat...
+    docker-compose restart
+    docker-compose ps
+
+elif [ "$1" == "status" ]
+then
+    docker-compose ps
+else
+    echo "Incorrect command!"
+    echo $USAGE
+fi

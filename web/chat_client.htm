@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class=''>
+<title>Chat</title>
+<head>
+	<meta charset=UTF-8>
+	<meta name=viewport content="width=device-width,initial-scale=1, maximum-scale=1">
+	<link rel='stylesheet prefetch' href='css/reset.min.css'>
+	<link rel='stylesheet prefetch' href="css/bootstrap.min.css">
+	<link rel='stylesheet prefetch' href="css/app.css">
+	<script src="socket.io/socket.io.js"></script>
+	<script src="js/app.min.js"></script>
+</head>
+
+<body>
+
+<div id=landing>
+	<h3>Welcome to chat</h3>
+	
+	<input placeholder="Your name" id=nst_name maxlength=30> <button id=nst_login>Join</button>
+	<div id=nst_status></div>
+	
+	<p>
+		Chat v1.0.0, License <a href="https://choosealicense.com/licenses/gpl-3.0/" target=_blank>GPL v3.0</a>, <a href="https://github.com/mrsmit-reps/chat" target=_blank>Source code</a>
+	</p>
+</div>
+
+
+
+<div id="frame">
+	<div id="sidepanel">
+		<div id="contacts">
+			<ul>
+				<li class="contact hide">
+					<div class="wrap">
+						<img src="images/1.png" alt="" />
+						<div class="meta">
+							<p class="name"></p>
+							<p class="preview"></p>
+						</div>
+					</div>
+				</li>
+			
+
+	
+	
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="nst_close"></div>
+		<div class="messages">
+			<ul>
+
+			</ul>
+		</div>
+		<div class="message-input">
+			<div class="wrap">
+			<input type="text" id=nst_text placeholder="Write your message..." maxlength=1024>
+			
+			<button class="submit" id=nst_send>SEND</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

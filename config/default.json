@@ -1,0 +1,13 @@
+{
+	// Chat server listening port
+	"listen_port": 31337,
+	
+	// Server secret key for JWT
+	"server_token": "very c001 T0k3n^",
+	
+	// Kick client on idle after seconds
+	"client_timeout": 600,
+	
+	// Server log file
+	"logs": "logs/chat_server.log",
+}
